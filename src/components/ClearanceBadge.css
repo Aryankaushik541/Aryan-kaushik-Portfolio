@@ -1,0 +1,75 @@
+.badge {
+  position: relative;
+  overflow: hidden;
+  padding: 22px 24px;
+  width: 260px;
+  max-width: 100%;
+}
+
+.badge-scan {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(180deg, transparent, rgba(63, 182, 139, 0.14), transparent);
+  animation: scan 3.6s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes scan {
+  0% { top: -40%; }
+  100% { top: 100%; }
+}
+
+.badge-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px rgba(63, 182, 139, 0.18);
+}
+
+.badge-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+
+.badge-title {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.badge-sub {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.badge-meta {
+  display: flex;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .badge-scan {
+    animation: none;
+    display: none;
+  }
+}

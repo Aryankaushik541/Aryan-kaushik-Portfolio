@@ -1,0 +1,23 @@
+.wa-fab {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 200;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: none;
+  background: #25d366;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+  animation: pulseRing 2.6s ease-out infinite, floatY 3.2s ease-in-out infinite;
+  transition: transform 0.2s var(--ease-out);
+}
+
+.wa-fab:hover {
+  transform: scale(1.06);
+}
