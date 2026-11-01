@@ -11,11 +11,8 @@ import Contact         from "./components/Contact";
 import FeaturedProjects from "./components/FeaturedProjects";
 import Hero            from "./components/Hero";
 import RepoCard        from "./components/RepoCard";
-import WhatsAppButton  from "./components/WhatsAppButton";
-import ChatbotWidget   from "./components/ChatbotWidget";
 import Login           from "./pages/Login";
 import AdminDashboard  from "./pages/AdminDashboard";
-import AIChat          from "./pages/AIChat";
 import ProtectedRoute  from "./components/ProtectedRoute";
 
 const API_BASE = import.meta.env.VITE_API_URL || "";
@@ -67,7 +64,7 @@ export default function App() {
             path="/ai"
             element={
               <ProtectedRoute>
-                <AIChat />
+                
               </ProtectedRoute>
             }
           />
@@ -75,8 +72,8 @@ export default function App() {
         </Routes>
       </main>
       {!isFullScreenPage && <Footer />}
-      {!isFullScreenPage && <ChatbotWidget />}
-      {!isFullScreenPage && <WhatsAppButton />}
+      
+      
     </>
   );
 }
